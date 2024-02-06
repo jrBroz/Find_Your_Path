@@ -1,18 +1,26 @@
 import os
+import psutil
 
 def map_TXT_Driver(arquivo):
     with open("DriverMapped.txt", "a") as file:
         file.writelines(arquivo + '\n')
-
 ...
 
-###
-#def readTXT(arquivo):
+def listar_drivers():
+    try:
+        Current_Devices = psutil.disk_partitions(all=True)
 
- #   with open("DriverMapped.txt", "w") as file:
-      #  file.read(arquivo)
-   # ...
-#
+        if Current_Devices:
+            print("Lista de Drivers:")
+            for dispositivo in Current_Devices:
+                print(f"Nome: {dispositivo.device}, Tipo: {dispositivo.fstype}")
+        else:
+            print("Nenhum driver encontrado.")
+
+    except Exception as e:
+        print(f"Ocorreu um erro: {e}")
+...
+
 
 def ProcurarArquivo():
 
