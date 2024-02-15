@@ -13,11 +13,3 @@ def listar_drivers():
     except Exception as e:
         print(f"Ocorreu um erro: {e}")
         ...
-
-
-
-    def escolher_driver():
-        pass
-
-
-
