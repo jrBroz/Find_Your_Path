@@ -10,9 +10,7 @@ def ler_txt():
 
                 print("Linha: ", linha)
                 print("Caminho: ", conteudo)
-
         else:
             print("________________")
             print("Fim da busca.")
-
     ...
