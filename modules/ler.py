@@ -6,11 +6,11 @@ def ler_txt():
 
         for linha, conteudo in enumerate(rd_file):
 
-            if palavra_procurada in conteudo:
+            if palavra_procurada in conteudo: print("Linha: ", linha), print("Caminho: ", conteudo)
 
-                print("Linha: ", linha)
-                print("Caminho: ", conteudo)
-        else:
-            print("________________")
-            print("Fim da busca.")
+        print("-" * 30)
+        segunda_busca = input("Vai procurar algo a mais no driver atual ?  s/n ")
+
+        if segunda_busca == 's': ler_txt()
+        else: print("-" * 20) ,    print("Fim da busca.")
     ...

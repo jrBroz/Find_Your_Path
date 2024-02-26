@@ -1,12 +1,17 @@
+import threading
+import time
+from modules import ler
 from modules import varrer as varrer_driver
-
-
 # --------------------------------------
 
+def iniciar_programa():
 
-# Todas as funções abaixo foram testadas e estão funcionand 100%
-# Falta criar a GUI e fazer com que tudo converse entre si, de forma que eu possa criar a interface que converse com todas as funções.
+    thread_varrer = threading.Thread(target=varrer_driver.varrer_e_mapear)
+    thread_ler = threading.Thread(target=ler.ler_txt)
 
+    thread_varrer.start()
+    time.sleep(7)
+    thread_ler.start()
+    ...
 
-
-varrer_driver.varrer_e_mapear()
+iniciar_programa()
