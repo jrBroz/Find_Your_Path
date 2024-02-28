@@ -10,6 +10,6 @@ def listar_drivers():
         for dispositivo in dispositivo_atual:
             print(f"Nome: {dispositivo.device}, Tipo: {dispositivo.fstype}")
 
-    except Exception as e:
-        print(f"Ocorreu um erro: {e}")
-        ...
+    except Exception as e: print(f"Ocorreu um erro: {e}")
+
+    ...

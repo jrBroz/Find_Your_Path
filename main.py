@@ -10,8 +10,8 @@ def iniciar_programa():
     thread_ler = threading.Thread(target=ler.ler_txt)
 
     thread_varrer.start()
-    time.sleep(7)
+    thread_varrer.join()
+    time.sleep(7) # retirar caso retire o .join() caso nao manter.
     thread_ler.start()
     ...
-
 iniciar_programa()
