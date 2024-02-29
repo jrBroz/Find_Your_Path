@@ -11,7 +11,6 @@ def iniciar_programa():
 
     thread_varrer.start()
     thread_varrer.join()
-    time.sleep(7) # retirar caso retire o .join() caso nao manter.
     thread_ler.start()
     ...
 iniciar_programa()
