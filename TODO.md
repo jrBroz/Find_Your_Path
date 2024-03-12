@@ -8,8 +8,6 @@
 
 - Perguntar ao usuário o que ele gostaria de procurar em específico em sua máquina.
 - Ler o arquivo .txt e caso exista o que ele procura retornar a ele.
+- GUI
 __________
 ______
-### WIP: [Work In Progress:]
- 
-- GUI
