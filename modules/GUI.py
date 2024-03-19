@@ -81,7 +81,7 @@ app.title("Find Your Path")
 style.configure('green_neon.TButton', background='#39FF14', foreground='black')
 style.configure('green_neon.Horizontal.TProgressbar', background='#39FF14')
 
-icone = PhotoImage(file = 'Find Your Path/assets/find_your_path_icon.png')
+icone = PhotoImage(file = 'assets/find_your_path_icon.png')
 app.iconphoto(False, icone)
 # Frame principal
 main_frame = Frame(app)
