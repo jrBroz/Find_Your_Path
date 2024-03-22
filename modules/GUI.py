@@ -6,8 +6,19 @@ from ttkbootstrap.style import Style
 import os
 import threading
 import psutil
+import sys
 
+# https://stackoverflow.com/questions/31836104/pyinstaller-and-onefile-how-to-include-an-image-in-the-exe-file
+def resource_path(relative_path):
+    
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS2
+    except Exception:
+        base_path = os.path.abspath(".")
 
+    return os.path.join(base_path, relative_path)
 
 
     # Função para listar os drivers usando psutil
@@ -72,7 +83,7 @@ def animar_barra_progresso():
             app.after(10)
         # Continuar animação enquanto a varredura estiver em andamento
         
-
+ 
 app = ttk.Window("")
 app.geometry("620x670")  # Aumentei um pouco para caber a barra de progresso
 style = Style(theme="cyborg") # voltar pra cyborg
@@ -81,8 +92,8 @@ app.title("Find Your Path")
 style.configure('green_neon.TButton', background='#39FF14', foreground='black')
 style.configure('green_neon.Horizontal.TProgressbar', background='#39FF14')
 
-icone = PhotoImage(file = 'assets/find_your_path_icon.png')
-app.iconphoto(False, icone)
+icone = PhotoImage(file = resource_path('assets\\find_your_path_icon.png'))
+app.iconphoto(False, icone)  
 # Frame principal
 main_frame = Frame(app)
 main_frame.pack(fill=BOTH, expand=True)
